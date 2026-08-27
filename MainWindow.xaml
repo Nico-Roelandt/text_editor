@@ -11,6 +11,7 @@
     <Grid.RowDefinitions>
         <RowDefinition Height="Auto" />
         <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
 
 <Menu Grid.Row="0">
@@ -24,15 +25,6 @@
     <MenuItem Command="ApplicationCommands.Cut"/>
     <MenuItem Command="ApplicationCommands.Paste"/>
   </MenuItem>
-  <MenuItem Header="Font">
-    <MenuItem Header="Bold" Click="ToggleBold_Click"/>
-    <MenuItem Header="Italic" Click="ToggleItalic_Click"/>
-    <Separator/>
-    <MenuItem Header="Increase Font Size"
-              Click="IncreaseFont_Click"/>
-    <MenuItem Header="Decrease Font Size"
-              Click="DecreaseFont_Click"/>
-  </MenuItem>
 </Menu>
 
 
@@ -40,12 +32,54 @@
          x:Name="Editor"
          AcceptsReturn="True"
          AcceptsTab="True"
+         IsInactiveSelectionHighlightEnabled="True"
+         SelectionChanged="Editor_SelectionChanged"
          TextChanged="Editor_TextChanged"
          VerticalScrollBarVisibility="Auto"
          HorizontalScrollBarVisibility="Auto"
          FontFamily="Consolas"
          FontSize="15"
          Padding="10" />
+
+<Border Grid.Row="2"
+        x:Name="SelectionToolbar"
+        Visibility="Collapsed"
+        Background="#F3F3F3"
+        BorderBrush="#D0D0D0"
+        BorderThickness="0,1,0,0"
+        Padding="8">
+  <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+    <TextBlock Text="Selection"
+               VerticalAlignment="Center"
+               Margin="0,0,12,0" />
+    <Button Content="B"
+            FontWeight="Bold"
+            ToolTip="Bold"
+            Focusable="False"
+            MinWidth="36"
+            Margin="2"
+            Click="ToggleBold_Click" />
+    <Button Content="I"
+            FontStyle="Italic"
+            ToolTip="Italic"
+            Focusable="False"
+            MinWidth="36"
+            Margin="2"
+            Click="ToggleItalic_Click" />
+    <Button Content="A−"
+            ToolTip="Decrease font size"
+            Focusable="False"
+            MinWidth="36"
+            Margin="2"
+            Click="DecreaseFont_Click" />
+    <Button Content="A+"
+            ToolTip="Increase font size"
+            Focusable="False"
+            MinWidth="36"
+            Margin="2"
+            Click="IncreaseFont_Click" />
+  </StackPanel>
+</Border>
 
 
     </Grid>

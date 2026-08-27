@@ -77,6 +77,13 @@ public partial class MainWindow : Window
         Editor.Focus();
     }
 
+    private void Editor_SelectionChanged(object sender, RoutedEventArgs e)
+    {
+        SelectionToolbar.Visibility = Editor.Selection.IsEmpty
+            ? Visibility.Collapsed
+            : Visibility.Visible;
+    }
+
     private async void OpenFile_Click(object sender, RoutedEventArgs e)
     {
         OpenFileDialog dialog = new OpenFileDialog

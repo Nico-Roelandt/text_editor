@@ -28,3 +28,9 @@ C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionFormattingSmoke\TextEditor
 C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionFormattingSmoke\TextEditor.runtimeconfig.json
 C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionFormattingSmoke\TextEditor.dll
 C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionFormattingSmoke\TextEditor.pdb
+C:\Users\nicolas\Desktop\dev\text_editor\obj\Debug\net10.0-windows\TextEditor.sourcelink.json
+C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionToolbarSmoke\TextEditor.exe
+C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionToolbarSmoke\TextEditor.deps.json
+C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionToolbarSmoke\TextEditor.runtimeconfig.json
+C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionToolbarSmoke\TextEditor.dll
+C:\Users\nicolas\Desktop\dev\text_editor\bin\SelectionToolbarSmoke\TextEditor.pdb
